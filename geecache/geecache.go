@@ -21,7 +21,7 @@ type Group struct{
 	name string
 	getter Getter//回调函数
 	maincache cache//保存缓存值
-	peers PeerPicker //保存了一个httpPool结构体
+	peers PeerPicker //保存了一个httpPool/grpcpool结构体
 	loader *singleflight.Group//防止并发过大
 }
 var (

@@ -10,7 +10,6 @@ import (
 	"net/url"
 	"strings"
 	"sync"
-
 	"google.golang.org/protobuf/proto"
 )
 
@@ -124,5 +123,3 @@ func (p *HTTPPool)PickPeer(key string)(PeerGetter,bool){
 	return nil,false
 }
 var _ PeerPicker = (*HTTPPool)(nil)
-
-
